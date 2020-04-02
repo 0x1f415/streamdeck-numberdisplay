@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"target": "es6",
+		"module": "commonjs",
+		"lib": ["es2017", "DOM", "es2015.proxy"]
+	}
+}

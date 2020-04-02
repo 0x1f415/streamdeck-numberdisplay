@@ -1,27 +1,24 @@
 
-`NumberDisplay` is a sample plugin demonstrating the [Stream Deck SDK](https://developer.elgato.com/documentation/stream-deck/).
+# deckflex
 
+## description
 
-# Description
+**THIS PROJECT IS A WORK-IN-PROGRESS** and does not currently work, although hopefully it eventually will.
 
-`NumberDisplay` is a plugin that displays a number chosen by the user. This plugin demonstrates how to create a custom Property Inspector and how to pass values from Property Inspector's input controls to the plugin.
+deckflex aims to create a generic, reusable library for creating plugins for the Elgato Stream Deck using their JavaScript SDK. the original source code is derived from Elgato sample plugins.
 
+## goals
 
-# Features
+the project should be modular and allow developers to import only the needed parts of the library. as much of the library should be split into separate packages as possible. project sub-packages should be designed to be used independently as possible while retaining inter-compatibility with other sub-packages.
 
-- code written in Javascript
-- cross-platform (macOS, Windows)
-- Property Inspector with multiple UI elements
-- localized
+the project should be written 100% in TypeScript, and packages will provide typings.
 
-![](screenshot.png)
+each package should be tested as much as possible and aim for 100% code coverage.
 
+the package should make use of modern JavaScript language features as as much as possible with the goal of keeping the bundle size to a minimum.
 
-# Installation
+utility functions will be kept out of the core package and, if necessary, provided in separate packages.
 
-In the Release folder, you can find the file `com.elgato.numberdisplay.streamDeckPlugin`. If you double-click this file on your machine, Stream Deck will install the plugin.
+rather than "reinventing the wheel", utility functions will be pulled in from well-maintained npm packages (ex. lodash) wherever possible. where this is done, tree-shaking should be used to ensure only the required code is pulled in to the bundle.
 
-
-# Source code
-
-The Sources folder contains the source code of the plugin.
+packages will be distributed on npm and users will be encouraged to use bundlers such as webpack.
