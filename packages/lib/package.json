@@ -10,10 +10,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/events": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "eslint": "^6.8.0",
     "prettier": "^2.0.2",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "emittery": "^0.6.0",
+    "events": "^3.1.0",
+    "typed-emitter": "^1.0.0"
   }
 }
